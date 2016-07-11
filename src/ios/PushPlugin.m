@@ -34,6 +34,7 @@
 @synthesize notificationMessage;
 @synthesize isInline;
 @synthesize coldstart;
+@synthesize intent;
 
 @synthesize callbackId;
 @synthesize notificationCallbackId;
@@ -500,6 +501,10 @@
             [additionalData setObject:[NSNumber numberWithBool:NO] forKey:@"coldstart"];
         }
 
+        if (intent != nil ) {
+            [additionalData setObject:[NSNumber numberWithBool:intent] forKey:@"intent"];
+        }
+
         [message setObject:additionalData forKey:@"additionalData"];
 
         // send notification message
@@ -509,6 +514,7 @@
 
         self.coldstart = NO;
         self.notificationMessage = nil;
+        self.intent = nil;
     }
 }
 

@@ -187,6 +187,7 @@ static char coldstartKey;
     }
 
     if (self.launchNotification) {
+        pushHandler.intent = YES;
         pushHandler.isInline = NO;
         pushHandler.coldstart = [self.coldstart boolValue];
         pushHandler.notificationMessage = self.launchNotification;

@@ -50,6 +50,7 @@
 @property (nonatomic, strong) NSDictionary *notificationMessage;
 @property BOOL isInline;
 @property BOOL coldstart;
+@property BOOL intent;
 @property BOOL clearBadge;
 @property (nonatomic, strong) NSMutableDictionary *handlerObj;
 
